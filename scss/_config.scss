@@ -1,0 +1,14 @@
+$primary-color: #09070f;
+$secondary-color: #368A7A;
+$main-font: 'Alegreya Sans',
+sans-serif;
+$heading-font: 'Anton',
+sans-serif;
+@mixin transition-ease {
+    transition: all 0.5s ease;
+}
+
+@mixin transition-ease-in-out {
+    transition: all 0.8s ease-in-out;
+    transition-delay: 0.2s;
+}

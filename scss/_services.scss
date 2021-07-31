@@ -1,0 +1,92 @@
+.services {
+    padding: 1em;
+    .container {
+        display: flex;
+        flex-direction: column;
+        &-img {
+            padding-top: 42vh;
+            height: 50vh;
+            background: linear-gradient(to top, rgba(#368A7A, 0.5), rgba(#368A7A, 0.1)), url(../hands.jpg) center;
+            background-size: cover;
+            h1 {
+                font-family: $heading-font;
+                text-align: center;
+                font-weight: 100;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+        }
+        &-service {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            &__list {
+                padding: 1em;
+                border-top: 1px #368A7A solid;
+                border-bottom: 5px #368A7A solid;
+                margin: 0.6em 0;
+                background-color: rgba(217, 250, 233, 0.418);
+                font-size: 1.3rem;
+                i {
+                    font-size: 2rem;
+                    color: $secondary-color;
+                }
+                h3 {
+                    display: inline;
+                    position: relative;
+                    left: 5px;
+                    bottom: 5px;
+                    font-size: 1.2rem;
+                    font-weight: 800;
+                }
+                h5 {
+                    font-weight: 100;
+                }
+            }
+            &__list:hover i {
+                @include transition-ease;
+                transform: rotate(360deg);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1080px) {
+    .services {
+        .container {
+            padding: 0 1em;
+            display: flex;
+            flex-direction: row;
+            &-img {
+                width: 40vw;
+                height: 78vh;
+                padding: 0;
+                h1 {
+                    font-size: 2.5rem;
+                    color: $secondary-color;
+                    text-shadow: black 1.5px 1px;
+                }
+            }
+            &-service {
+                grid-template-columns: repeat(2, 1fr);
+                &__list {
+                    max-width: 750px;
+                    margin: 10px;
+                    font-size: 1.3rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .services {
+        .container {
+            &-service {
+                &__list {
+                    max-width: 700px;
+                    margin: 10px;
+                }
+            }
+        }
+    }
+}
